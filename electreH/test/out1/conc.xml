@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type='text/xsl' href='xmcdaXSL.xsl'?>
+<xmcda:XMCDA xmlns:xmcda='http://www.decision-deck.org/2012/XMCDA-2.2.1' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.decision-deck.org/2012/XMCDA-2.2.1 http://www.decision-deck.org/xmcda/_downloads/XMCDA-2.2.1.xsd'>
+
+  <criteriaValues mcdaConcept="Concordance">
+    <criterionValue>
+      <criterionID>Komunikacja publiczna</criterionID>
+      <value>
+        <real>0.042</real>
+      </value>
+    </criterionValue>
+
+    <criterionValue>
+      <criterionID>Dzieci</criterionID>
+      <value>
+        <real>0.105</real>
+      </value>
+    </criterionValue>
+
+    <criterionValue>
+      <criterionID>Rower</criterionID>
+      <value>
+        <real>0.042</real>
+      </value>
+    </criterionValue>
+
+    <criterionValue>
+      <criterionID>Mieszkanie</criterionID>
+      <value>
+        <real>0.469</real>
+      </value>
+    </criterionValue>
+
+    <criterionValue>
+      <criterionID>Samochod</criterionID>
+      <value>
+        <real>0.042</real>
+      </value>
+    </criterionValue>
+
+    <criterionValue>
+      <criterionID>Koszty</criterionID>
+      <value>
+        <real>0.105</real>
+      </value>
+    </criterionValue>
+  </criteriaValues>
+
+</xmcda:XMCDA>

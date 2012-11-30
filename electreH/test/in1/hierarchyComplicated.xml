@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type='text/xsl' href='xmcdaXSL.xsl'?>
+<xmcda:XMCDA xmlns:xmcda='http://www.decision-deck.org/2012/XMCDA-2.2.1' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.decision-deck.org/2012/XMCDA-2.2.1 http://www.decision-deck.org/xmcda/_downloads/XMCDA-2.2.1.xsd'>
+
+  <hierarchy>
+    <description>
+      <comment>A hierarchy of criteria</comment>
+    </description>
+      	<node>
+        	<criterionID>Root</criterionID>    	
+      		<node>
+        		<criterionID>Mathematics</criterionID>    		
+      			<node>
+        			<criterionID>Algebra</criterionID>    			
+      				<node>
+        				<criterionID>Group Theory</criterionID>    				
+      				</node>
+      				<node>
+        				<criterionID>Linear Algebra</criterionID>    				
+      				</node>
+      			</node>
+      			<node>
+        			<criterionID>Analysis</criterionID>    			
+      				<node>
+        				<criterionID>Calculus</criterionID>    				
+      				</node>
+      				<node>
+        				<criterionID>Functional Analysis</criterionID>    				
+      				</node>
+      			</node>
+      			<node>
+        			<criterionID>Anal. Chem</criterionID>    			
+      				<node>
+        				<criterionID>Anal. Chemistry I</criterionID>    				
+      				</node>
+      				<node>
+        				<criterionID>Applied. Anal. Chemistry</criterionID>    				
+      				</node>
+      				<node>
+        				<criterionID>Organic Chem. II</criterionID>    				
+      				</node>
+      			</node>
+      		</node>
+      		<node>
+        		<criterionID>Chemistry</criterionID>    		
+      			<node>
+        			<criterionID>Anal. Chem</criterionID>    			
+      				<node>
+        				<criterionID>Anal. Chemistry I</criterionID>    				
+      				</node>
+      				<node>
+        				<criterionID>Applied. Anal. Chemistry</criterionID>    				
+      				</node>
+      				<node>
+        				<criterionID>Organic Chem. II</criterionID>    				
+      				</node>
+      			</node>
+      			<node>
+        			<criterionID>Org. Chem</criterionID>    			
+      				<node>
+        				<criterionID>Organic Chem. I</criterionID>    				
+      				</node>
+      				<node>
+        				<criterionID>Organic Chem. II</criterionID>    				
+      				</node>
+      			</node>
+      		</node>
+      	</node>
+  </hierarchy>
+
+</xmcda:XMCDA>

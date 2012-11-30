@@ -1,0 +1,36 @@
+<xmcda:XMCDA xsi:schemaLocation="http://www.decision-deck.org/2009/XMCDA-2.0.0 http://sma.uni.lu/d2cms/xmcda/_downloads/XMCDA-2.0.0.xsd" 
+    xmlns:xmcda="http://www.decision-deck.org/2009/XMCDA-2.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alternativesValues mcdaConcept="upwards distillation">
+    <alternativeValue>
+      <alternativeID>s1</alternativeID>
+      <value>
+        <real>1.0</real>
+      </value>
+    </alternativeValue>
+    <alternativeValue>
+      <alternativeID>s4</alternativeID>
+      <value>
+        <real>2.0</real>
+      </value>
+    </alternativeValue>
+    <alternativeValue>
+      <alternativeID>s2</alternativeID>
+      <value>
+        <real>3.0</real>
+      </value>
+    </alternativeValue>
+    <alternativeValue>
+      <alternativeID>s3</alternativeID>
+      <value>
+        <real>4.0</real>
+      </value>
+    </alternativeValue>
+    <alternativeValue>
+      <alternativeID>s5</alternativeID>
+      <value>
+        <real>5.0</real>
+      </value>
+    </alternativeValue>
+  </alternativesValues>
+</xmcda:XMCDA>

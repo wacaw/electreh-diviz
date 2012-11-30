@@ -1,0 +1,68 @@
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2012/XMCDA-2.2.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+
+    <alternativesComparisons mcdaConcept="Pairwise comparison">
+        <comparisonType>outranks</comparisonType>
+        <criterionID>Dzieci</criterionID>
+        <pairs>
+            <pair>
+                <initial>
+                    <alternativeID>Suchy Las</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Ogrody</alternativeID>
+                </terminal>
+                <value>
+                    <real>1</real>
+                </value>
+            </pair>
+         </pairs>
+     </alternativesComparisons>
+     <alternativesComparisons mcdaConcept="Pairwise comparison">
+        <comparisonType>outranks</comparisonType>
+        <criterionID>Koszty</criterionID>
+        <pairs>
+            <pair>
+                <initial>
+                    <alternativeID>Centrum</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Suchy Las</alternativeID>
+                </terminal>
+                <value>
+                    <real>0</real>
+                </value>
+            </pair>
+        </pairs>
+    </alternativesComparisons>
+    
+     <alternativesComparisons mcdaConcept="Pairwise comparison">
+        <comparisonType>outranks</comparisonType>
+        <criterionID>Mieszkanie</criterionID>
+        <pairs>
+            <pair>
+                <initial>
+                    <alternativeID>Ogrody</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo</alternativeID>
+                </terminal>
+                <value>
+                    <real>1</real>
+                </value>
+            </pair>
+             <pair>
+                <initial>
+                    <alternativeID>Piatkowo</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </terminal>
+                <value>
+                    <label>?</label>
+                </value>
+            </pair>
+         </pairs>
+     </alternativesComparisons>
+
+</xmcda:XMCDA>

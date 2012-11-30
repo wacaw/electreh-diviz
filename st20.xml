@@ -1,0 +1,15 @@
+<xmcda:XMCDA xsi:schemaLocation="http://www.decision-deck.org/2009/XMCDA-2.0.0 http://www.decision-deck.org/xmcda/_downloads/XMCDA-2.0.0.xsd" xmlns:xmcda="http://www.decision-deck.org/2009/XMCDA-2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <projectReference>
+    <comment>Students.</comment>
+  </projectReference>
+
+  <alternatives>
+    <alternative id="s1" name="Student 1" ><active>true</active></alternative>
+    <alternative id="s2" name="Student 2" ><active>true</active></alternative>
+    <alternative id="s3" name="Student 3" ><active>true</active></alternative>
+    <alternative id="s4" name="Student 4" ><active>true</active></alternative>
+    <alternative id="s5" name="Student 5"  ><active>true</active></alternative>
+  </alternatives>
+
+</xmcda:XMCDA>
+  

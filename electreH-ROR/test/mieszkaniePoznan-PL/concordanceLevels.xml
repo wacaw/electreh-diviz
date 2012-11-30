@@ -1,0 +1,46 @@
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2012/XMCDA-2.2.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<projectReference>
+		<comment>Concordance cutting levels.</comment>
+	</projectReference>
+	
+	<criteriaValues mcdaConcept="Concordance" name="Concordacce cutting level">
+		<criterionValue>
+			<criterionID>Komunikacja publiczna</criterionID>
+			<value>
+				<real>0.042</real>
+			</value>
+		</criterionValue>
+		<criterionValue>
+			<criterionID>Samochod</criterionID>
+			<value>
+				<real>0.042</real>
+			</value>
+		</criterionValue>
+		<criterionValue>
+			<criterionID>Rower</criterionID>
+			<value>
+				<real>0.042</real>
+			</value>
+		</criterionValue>
+		<criterionValue>
+			<criterionID>Mieszkanie</criterionID>
+			<value>
+				<real>0.469</real>
+			</value>
+		</criterionValue>
+		<criterionValue>
+			<criterionID>Dzieci</criterionID>
+			<value>
+				<real>0.105</real>
+			</value>
+		</criterionValue>
+		<criterionValue>
+			<criterionID>Koszty</criterionID>
+			<value>
+				<real>0.077</real>
+			</value>
+		</criterionValue>
+	</criteriaValues>
+</xmcda:XMCDA>
+  

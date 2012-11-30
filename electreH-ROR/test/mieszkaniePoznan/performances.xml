@@ -1,0 +1,598 @@
+<ns0:XMCDA xsi:schemaLocation="http://www.decision-deck.org/2009/XMCDA-2.1.0 http://www.decision-deck.org/xmcda/_downloads/XMCDA-2.1.0.xsd" xmlns:ns0="http://www.decision-deck.org/2009/XMCDA-2.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <performanceTable>
+    <alternativePerformances>
+      <alternativeID>Centrum</alternativeID>
+      <performance>
+        <criterionID>kom. pub. Koszt</criterionID>
+        <value>
+          <real>99.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>kom. pub. Czas</criterionID>
+        <value>
+          <real>5.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>kom. pub. Komfort</criterionID>
+        <value>
+          <real>10.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>samochod Koszt</criterionID>
+        <value>
+          <real>2.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>samochod Czas</criterionID>
+        <value>
+          <real>5.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>samochod Komfort</criterionID>
+        <value>
+          <real>8.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>rower Koszt</criterionID>
+        <value>
+          <real>20.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>rower Czas</criterionID>
+        <value>
+          <real>5.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>rower Komfort</criterionID>
+        <value>
+          <real>7.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>ocena okolicy</criterionID>
+        <value>
+          <real>15.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>metraz mieszkania</criterionID>
+        <value>
+          <real>58.1</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>cena</criterionID>
+        <value>
+          <real>383460.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>bezpieczenstwo</criterionID>
+        <value>
+          <real>16.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>ocena mieszkania</criterionID>
+        <value>
+          <real>16.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>odleglosc od szkoly</criterionID>
+        <value>
+          <real>0.5</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>odleglosc od parkow</criterionID>
+        <value>
+          <real>0.3</real>
+        </value>
+      </performance>
+    </alternativePerformances>
+    <alternativePerformances>
+      <alternativeID>Ogrody</alternativeID>
+      <performance>
+        <criterionID>kom. pub. Koszt</criterionID>
+        <value>
+          <real>99.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>kom. pub. Czas</criterionID>
+        <value>
+          <real>35.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>kom. pub. Komfort</criterionID>
+        <value>
+          <real>8.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>samochod Koszt</criterionID>
+        <value>
+          <real>4.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>samochod Czas</criterionID>
+        <value>
+          <real>15.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>samochod Komfort</criterionID>
+        <value>
+          <real>9.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>rower Koszt</criterionID>
+        <value>
+          <real>40.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>rower Czas</criterionID>
+        <value>
+          <real>15.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>rower Komfort</criterionID>
+        <value>
+          <real>7.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>ocena okolicy</criterionID>
+        <value>
+          <real>15.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>metraz mieszkania</criterionID>
+        <value>
+          <real>63.25</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>cena</criterionID>
+        <value>
+          <real>385825.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>bezpieczenstwo</criterionID>
+        <value>
+          <real>16.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>ocena mieszkania</criterionID>
+        <value>
+          <real>16.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>odleglosc od szkoly</criterionID>
+        <value>
+          <real>0.8</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>odleglosc od parkow</criterionID>
+        <value>
+          <real>0.1</real>
+        </value>
+      </performance>
+    </alternativePerformances>
+    <alternativePerformances>
+      <alternativeID>Piatkowo</alternativeID>
+      <performance>
+        <criterionID>kom. pub. Koszt</criterionID>
+        <value>
+          <real>99.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>kom. pub. Czas</criterionID>
+        <value>
+          <real>20.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>kom. pub. Komfort</criterionID>
+        <value>
+          <real>8.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>samochod Koszt</criterionID>
+        <value>
+          <real>5.8</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>samochod Czas</criterionID>
+        <value>
+          <real>20.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>samochod Komfort</criterionID>
+        <value>
+          <real>8.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>rower Koszt</criterionID>
+        <value>
+          <real>40.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>rower Czas</criterionID>
+        <value>
+          <real>20.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>rower Komfort</criterionID>
+        <value>
+          <real>8.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>ocena okolicy</criterionID>
+        <value>
+          <real>14.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>metraz mieszkania</criterionID>
+        <value>
+          <real>58.06</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>cena</criterionID>
+        <value>
+          <real>389002.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>bezpieczenstwo</criterionID>
+        <value>
+          <real>15.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>ocena mieszkania</criterionID>
+        <value>
+          <real>17.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>odleglosc od szkoly</criterionID>
+        <value>
+          <real>0.9</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>odleglosc od parkow</criterionID>
+        <value>
+          <real>1.0</real>
+        </value>
+      </performance>
+    </alternativePerformances>
+    <alternativePerformances>
+      <alternativeID>Suchy Las</alternativeID>
+      <performance>
+        <criterionID>kom. pub. Koszt</criterionID>
+        <value>
+          <real>90.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>kom. pub. Czas</criterionID>
+        <value>
+          <real>40.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>kom. pub. Komfort</criterionID>
+        <value>
+          <real>5.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>samochod Koszt</criterionID>
+        <value>
+          <real>8.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>samochod Czas</criterionID>
+        <value>
+          <real>30.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>samochod Komfort</criterionID>
+        <value>
+          <real>7.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>rower Koszt</criterionID>
+        <value>
+          <real>60.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>rower Czas</criterionID>
+        <value>
+          <real>40.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>rower Komfort</criterionID>
+        <value>
+          <real>4.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>ocena okolicy</criterionID>
+        <value>
+          <real>16.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>metraz mieszkania</criterionID>
+        <value>
+          <real>51.8</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>cena</criterionID>
+        <value>
+          <real>330018.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>bezpieczenstwo</criterionID>
+        <value>
+          <real>17.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>ocena mieszkania</criterionID>
+        <value>
+          <real>16.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>odleglosc od szkoly</criterionID>
+        <value>
+          <real>1.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>odleglosc od parkow</criterionID>
+        <value>
+          <real>0.2</real>
+        </value>
+      </performance>
+    </alternativePerformances>
+    <alternativePerformances>
+      <alternativeID>Tarnowo Podgorne</alternativeID>
+      <performance>
+        <criterionID>kom. pub. Koszt</criterionID>
+        <value>
+          <real>100.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>kom. pub. Czas</criterionID>
+        <value>
+          <real>50.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>kom. pub. Komfort</criterionID>
+        <value>
+          <real>4.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>samochod Koszt</criterionID>
+        <value>
+          <real>16.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>samochod Czas</criterionID>
+        <value>
+          <real>40.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>samochod Komfort</criterionID>
+        <value>
+          <real>8.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>rower Koszt</criterionID>
+        <value>
+          <real>100.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>rower Czas</criterionID>
+        <value>
+          <real>60.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>rower Komfort</criterionID>
+        <value>
+          <real>3.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>ocena okolicy</criterionID>
+        <value>
+          <real>17.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>metraz mieszkania</criterionID>
+        <value>
+          <real>67.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>cena</criterionID>
+        <value>
+          <real>253997.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>bezpieczenstwo</criterionID>
+        <value>
+          <real>14.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>ocena mieszkania</criterionID>
+        <value>
+          <real>14.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>odleglosc od szkoly</criterionID>
+        <value>
+          <real>0.8</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>odleglosc od parkow</criterionID>
+        <value>
+          <real>0.7</real>
+        </value>
+      </performance>
+    </alternativePerformances>
+    <alternativePerformances>
+      <alternativeID>Piatkowo 2</alternativeID>
+      <performance>
+        <criterionID>kom. pub. Koszt</criterionID>
+        <value>
+          <real>99.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>kom. pub. Czas</criterionID>
+        <value>
+          <real>20.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>kom. pub. Komfort</criterionID>
+        <value>
+          <real>8.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>samochod Koszt</criterionID>
+        <value>
+          <real>5.8</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>samochod Czas</criterionID>
+        <value>
+          <real>20.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>samochod Komfort</criterionID>
+        <value>
+          <real>8.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>rower Koszt</criterionID>
+        <value>
+          <real>40.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>rower Czas</criterionID>
+        <value>
+          <real>20.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>rower Komfort</criterionID>
+        <value>
+          <real>8.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>ocena okolicy</criterionID>
+        <value>
+          <real>14.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>metraz mieszkania</criterionID>
+        <value>
+          <real>80.7</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>cena</criterionID>
+        <value>
+          <real>572970.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>bezpieczenstwo</criterionID>
+        <value>
+          <real>15.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>ocena mieszkania</criterionID>
+        <value>
+          <real>17.0</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>odleglosc od szkoly</criterionID>
+        <value>
+          <real>0.9</real>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>odleglosc od parkow</criterionID>
+        <value>
+          <real>1.0</real>
+        </value>
+      </performance>
+    </alternativePerformances>
+  </performanceTable>
+</ns0:XMCDA>

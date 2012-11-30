@@ -1,0 +1,113 @@
+<hierarchy>
+
+    <description>
+
+        <comment>
+A hierarchy of criteria
+        </comment>
+    </description>
+
+    <node>
+
+        <criterionID>
+Root
+        </criterionID>
+
+        <node>
+
+            <criterionID>
+Mathematics
+            </criterionID>
+
+            <node>
+
+                <criterionID>
+Algerbra
+                </criterionID>
+
+                <node>
+
+                    <criterionID>
+Group Theory
+                    </criterionID>
+                </node>
+
+                <node>
+
+                    <criterionID>
+Linear Algebra
+                    </criterionID>
+                </node>
+            </node>
+
+            <node>
+
+                <criterionID>
+Analysis
+                </criterionID>
+
+                <node>
+
+                    <criterionID>
+Calculus
+                    </criterionID>
+                </node>
+
+                <node>
+
+                    <criterionID>
+Functional Analysis
+                    </criterionID>
+                </node>
+            </node>
+        </node>
+
+        <node>
+
+            <criterionID>
+Chemistry
+            </criterionID>
+
+            <node>
+
+                <criterionID>
+Anal. Chem
+                </criterionID>
+
+                <node>
+
+                    <criterionID>
+Anal. Chemisty I
+                    </criterionID>
+                </node>
+
+                <node>
+
+                    <criterionID>
+Applied. Anal. Chemistry
+                    </criterionID>
+                </node>
+            </node>
+
+            <node>
+
+                <criterionID>
+Org. Chem
+                </criterionID>
+
+                <node>
+
+                    <criterionID>
+Organic Chem. I
+                    </criterionID>
+                </node>
+
+                <node>
+
+                    <criterionID>
+Organic Chem. II
+                    </criterionID>
+                </node>
+            </node>
+        </node>
+    </node>

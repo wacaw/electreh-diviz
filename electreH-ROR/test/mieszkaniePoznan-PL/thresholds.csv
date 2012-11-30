@@ -1,0 +1,6 @@
+,kom. pub. Koszt,kom. pub. Czas,kom. pub. Komfort,samochod Koszt,samochod Czas,samochod Komfort,rower Koszt,rower Czas,rower Komfort,ocena okolicy,metraz mieszkania,cena,bezpieczenstwo,ocena mieszkania,odleglosc od szkoly,odleglosc od parkow
+smallestInd,1,"2,5","0,5","0,5",7,"0,1",5,5,"0,5","0,3","2,5",25000,"0,2",1,"0,05","0,05"
+greatestInd,3,6,"1,5","5,5",13,1,12,10,"1,5","1,4",6,60000,1,2,"0,15","0,15"
+smallestPref,4,7,2,6,15,1,12,15,2,"1,5",6,65000,"1,5",2,"0,2","0,2"
+greatestPref,10,17,5,13,30,2,20,30,5,3,16,130000,3,3,"0,5","0,6"
+preferenceDirection,min,min,max,min,min,max,min,min,max,max,max,min,max,max,min,min

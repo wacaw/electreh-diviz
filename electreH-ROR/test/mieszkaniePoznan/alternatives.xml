@@ -1,0 +1,22 @@
+<ns0:XMCDA xsi:schemaLocation="http://www.decision-deck.org/2009/XMCDA-2.1.0 http://www.decision-deck.org/xmcda/_downloads/XMCDA-2.1.0.xsd" xmlns:ns0="http://www.decision-deck.org/2009/XMCDA-2.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alternatives>
+    <alternative id="Centrum">
+      <active>true</active>
+    </alternative>
+    <alternative id="Ogrody">
+      <active>true</active>
+    </alternative>
+    <alternative id="Piatkowo">
+      <active>true</active>
+    </alternative>
+    <alternative id="Suchy Las">
+      <active>true</active>
+    </alternative>
+    <alternative id="Tarnowo Podgorne">
+      <active>true</active>
+    </alternative>
+    <alternative id="Piatkowo 2">
+      <active>true</active>
+    </alternative>
+  </alternatives>
+</ns0:XMCDA>

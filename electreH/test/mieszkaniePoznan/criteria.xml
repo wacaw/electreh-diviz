@@ -1,0 +1,585 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type='text/xsl' href='xmcdaXSL.xsl'?>
+<xmcda:XMCDA xmlns:xmcda='http://www.decision-deck.org/2012/XMCDA-2.2.1' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.decision-deck.org/2012/XMCDA-2.2.1 http://www.decision-deck.org/xmcda/_downloads/XMCDA-2.2.1.xsd'>
+
+  <criteria>
+
+        <criterion id="bezpieczenstwo" name="bezpieczenstwo">
+      <scale>
+        <quantitative>
+          <preferenceDirection>max</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>7.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>2.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>3.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="cena#Koszty" name="cena#Koszty">
+      <scale>
+        <quantitative>
+          <preferenceDirection>min</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>100000.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>50000.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>80000.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="cena#Mieszkanie" name="cena#Mieszkanie">
+      <scale>
+        <quantitative>
+          <preferenceDirection>min</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>100000.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>50000.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>80000.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="kom. pub. Czas#Dzieci" name="kom. pub. Czas#Dzieci">
+      <scale>
+        <quantitative>
+          <preferenceDirection>min</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>40.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>5.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>15.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="kom. pub. Czas#Komunikacja publiczna" name="kom. pub. Czas#Komunikacja publiczna">
+      <scale>
+        <quantitative>
+          <preferenceDirection>min</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>40.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>5.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>15.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="kom. pub. Komfort" name="kom. pub. Komfort">
+      <scale>
+        <quantitative>
+          <preferenceDirection>max</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>7.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>1.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>3.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="kom. pub. Koszt#Dzieci" name="kom. pub. Koszt#Dzieci">
+      <scale>
+        <quantitative>
+          <preferenceDirection>min</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>50.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>10.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>20.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="kom. pub. Koszt#Komunikacja publiczna" name="kom. pub. Koszt#Komunikacja publiczna">
+      <scale>
+        <quantitative>
+          <preferenceDirection>min</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>50.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>10.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>20.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="kom. pub. Koszt#Koszty" name="kom. pub. Koszt#Koszty">
+      <scale>
+        <quantitative>
+          <preferenceDirection>min</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>50.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>10.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>20.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="metraz mieszkania" name="metraz mieszkania">
+      <scale>
+        <quantitative>
+          <preferenceDirection>max</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>30.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>5.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>9.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="ocena mieszkania" name="ocena mieszkania">
+      <scale>
+        <quantitative>
+          <preferenceDirection>max</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>7.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>2.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>4.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="ocena okolicy" name="ocena okolicy">
+      <scale>
+        <quantitative>
+          <preferenceDirection>max</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>7.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>2.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>4.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="odleglosc od parkow" name="odleglosc od parkow">
+      <scale>
+        <quantitative>
+          <preferenceDirection>min</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>1.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>0.1</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>0.3</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="odleglosc od szkoly" name="odleglosc od szkoly">
+      <scale>
+        <quantitative>
+          <preferenceDirection>min</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>1.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>0.1</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>0.3</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="rower Czas#Dzieci" name="rower Czas#Dzieci">
+      <scale>
+        <quantitative>
+          <preferenceDirection>min</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>40.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>10.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>20.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="rower Czas#Rower" name="rower Czas#Rower">
+      <scale>
+        <quantitative>
+          <preferenceDirection>min</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>40.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>10.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>20.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="rower Komfort" name="rower Komfort">
+      <scale>
+        <quantitative>
+          <preferenceDirection>max</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>7.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>1.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>3.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="rower Koszt#Dzieci" name="rower Koszt#Dzieci">
+      <scale>
+        <quantitative>
+          <preferenceDirection>min</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>60.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>10.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>15.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="rower Koszt#Koszty" name="rower Koszt#Koszty">
+      <scale>
+        <quantitative>
+          <preferenceDirection>min</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>60.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>10.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>15.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="rower Koszt#Rower" name="rower Koszt#Rower">
+      <scale>
+        <quantitative>
+          <preferenceDirection>min</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>60.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>10.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>15.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="samochod Czas" name="samochod Czas">
+      <scale>
+        <quantitative>
+          <preferenceDirection>min</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>40.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>15.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>25.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="samochod Komfort" name="samochod Komfort">
+      <scale>
+        <quantitative>
+          <preferenceDirection>max</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>7.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>1.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>3.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="samochod Koszt#Koszty" name="samochod Koszt#Koszty">
+      <scale>
+        <quantitative>
+          <preferenceDirection>min</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>500.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>50.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>100.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>
+        <criterion id="samochod Koszt#Samochod" name="samochod Koszt#Samochod">
+      <scale>
+        <quantitative>
+          <preferenceDirection>min</preferenceDirection>
+        </quantitative>
+      </scale>
+      <thresholds>
+        <threshold mcdaConcept="veto">
+          <constant>
+            <real>500.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="indiff">
+          <constant>
+            <real>50.0</real>
+          </constant>
+        </threshold>
+        <threshold mcdaConcept="pref">
+          <constant>
+            <real>100.0</real>
+          </constant>
+        </threshold>
+      </thresholds>
+        </criterion>  
+        </criteria>
+
+</xmcda:XMCDA>

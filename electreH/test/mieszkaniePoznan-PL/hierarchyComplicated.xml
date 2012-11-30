@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type='text/xsl' href='xmcdaXSL.xsl'?>
+<xmcda:XMCDA xmlns:xmcda='http://www.decision-deck.org/2012/XMCDA-2.2.1' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.decision-deck.org/2012/XMCDA-2.2.1 http://www.decision-deck.org/xmcda/_downloads/XMCDA-2.2.1.xsd'>
+
+  <hierarchy>
+    <description>
+      <comment>A hierarchy of criteria</comment>
+    </description>
+	<node>
+		<criterionID>Root</criterionID>
+			<node>
+				<criterionID>Dojazd do centrum</criterionID>		
+					<node>
+						<criterionID>Rower</criterionID>				
+							<node>
+								<criterionID>rower Czas#Rower</criterionID>						
+							</node>
+							<node>
+								<criterionID>rower Komfort</criterionID>						
+							</node>
+							<node>
+								<criterionID>rower Koszt#Rower</criterionID>						
+							</node>
+					</node>
+					<node>
+						<criterionID>Komunikacja publiczna</criterionID>				
+							<node>
+								<criterionID>kom. pub. Czas#Komunikacja publiczna</criterionID>						
+							</node>
+							<node>
+								<criterionID>kom. pub. Komfort</criterionID>						
+							</node>
+							<node>
+								<criterionID>kom. pub. Koszt#Komunikacja publiczna</criterionID>						
+							</node>
+					</node>
+					<node>
+						<criterionID>Samochod</criterionID>				
+							<node>
+								<criterionID>samochod Koszt#Samochod</criterionID>						
+							</node>
+							<node>
+								<criterionID>samochod Komfort</criterionID>						
+							</node>
+							<node>
+								<criterionID>samochod Czas</criterionID>						
+							</node>
+					</node>
+			</node>
+			<node>
+				<criterionID>Atrakcyjnosc</criterionID>		
+					<node>
+						<criterionID>Dzieci</criterionID>				
+							<node>
+								<criterionID>rower Koszt#Dzieci</criterionID>						
+							</node>
+							<node>
+								<criterionID>kom. pub. Koszt#Dzieci</criterionID>						
+							</node>
+							<node>
+								<criterionID>odleglosc od szkoly</criterionID>						
+							</node>
+							<node>
+								<criterionID>kom. pub. Czas#Dzieci</criterionID>						
+							</node>
+							<node>
+								<criterionID>odleglosc od parkow</criterionID>						
+							</node>
+							<node>
+								<criterionID>rower Czas#Dzieci</criterionID>						
+							</node>
+					</node>
+					<node>
+						<criterionID>Mieszkanie</criterionID>				
+							<node>
+								<criterionID>ocena okolicy</criterionID>						
+							</node>
+							<node>
+								<criterionID>cena#Mieszkanie</criterionID>						
+							</node>
+							<node>
+								<criterionID>bezpieczenstwo</criterionID>						
+							</node>
+							<node>
+								<criterionID>metraz mieszkania</criterionID>						
+							</node>
+							<node>
+								<criterionID>ocena mieszkania</criterionID>						
+							</node>
+					</node>
+			</node>
+			<node>
+				<criterionID>Koszty razem</criterionID>		
+					<node>
+						<criterionID>Koszty</criterionID>				
+							<node>
+								<criterionID>rower Koszt#Koszty</criterionID>						
+							</node>
+							<node>
+								<criterionID>kom. pub. Koszt#Koszty</criterionID>						
+							</node>
+							<node>
+								<criterionID>samochod Koszt#Koszty</criterionID>						
+							</node>
+							<node>
+								<criterionID>cena#Koszty</criterionID>						
+							</node>
+					</node>
+			</node>
+	</node>
+    </hierarchy>
+</xmcda:XMCDA>

@@ -1,0 +1,204 @@
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2012/XMCDA-2.2.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<projectReference>
+		<comment>Example - students.</comment>
+	</projectReference>
+
+	<criteria>
+		<criterion id="Group Theory" name="Group Theory">
+			<thresholds>
+				<threshold mcdaConcept="smallestInd">
+					<constant>
+						<integer>1</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="greatestInd">
+					<constant>
+						<integer>2</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="smallestPref">
+					<constant>
+						<integer>3</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="greatestPref">
+					<constant>
+						<integer>4</integer>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="Linear Algebra" name="Linear Algebra">
+			<thresholds>
+				<threshold mcdaConcept="smallestInd">
+					<constant>
+						<integer>1</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="greatestInd">
+					<constant>
+						<integer>2</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="smallestPref">
+					<constant>
+						<integer>3</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="greatestPref">
+					<constant>
+						<integer>4</integer>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="Calculus" name="Calculus">
+			<thresholds>
+				<threshold mcdaConcept="smallestInd">
+					<constant>
+						<integer>1</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="greatestInd">
+					<constant>
+						<integer>2</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="smallestPref">
+					<constant>
+						<integer>3</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="greatestPref">
+					<constant>
+						<integer>4</integer>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="Functional Analysis" name="Functional Analysis">
+			<thresholds>
+				<threshold mcdaConcept="smallestInd">
+					<constant>
+						<integer>1</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="greatestInd">
+					<constant>
+						<integer>2</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="smallestPref">
+					<constant>
+						<integer>3</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="greatestPref">
+					<constant>
+						<integer>4</integer>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="Anal. Chemistry I" name="Anal. Chemistry I">
+			<thresholds>
+				<threshold mcdaConcept="smallestInd">
+					<constant>
+						<integer>1</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="greatestInd">
+					<constant>
+						<integer>2</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="smallestPref">
+					<constant>
+						<integer>3</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="greatestPref">
+					<constant>
+						<integer>4</integer>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="Applied Anal. Chemistry" name="Applied Anal. Chemistry">
+			<thresholds>
+				<threshold mcdaConcept="smallestInd">
+					<constant>
+						<integer>1</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="greatestInd">
+					<constant>
+						<integer>2</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="smallestPref">
+					<constant>
+						<integer>3</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="greatestPref">
+					<constant>
+						<integer>4</integer>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="Organic Chem. I" name="Organic Chemistry I">
+			<thresholds>
+				<threshold mcdaConcept="smallestInd">
+					<constant>
+						<integer>1</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="greatestInd">
+					<constant>
+						<integer>2</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="smallestPref">
+					<constant>
+						<integer>3</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="greatestPref">
+					<constant>
+						<integer>4</integer>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="Organic Chem. II" name="Organic Chem. II">
+			<thresholds>
+				<threshold mcdaConcept="smallestInd">
+					<constant>
+						<integer>1</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="greatestInd">
+					<constant>
+						<integer>2</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="smallestPref">
+					<constant>
+						<integer>3</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="greatestPref">
+					<constant>
+						<integer>4</integer>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+	</criteria>
+</xmcda:XMCDA>
+
+
+  

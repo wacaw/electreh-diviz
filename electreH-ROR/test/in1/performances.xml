@@ -1,0 +1,263 @@
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2012/XMCDA-2.2.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<projectReference>
+		<comment>Students.</comment>
+	</projectReference>
+  <performanceTable>
+    <alternativePerformances>
+      <alternativeID>s1</alternativeID>
+      <performance>
+        <criterionID>Group Theory</criterionID>
+        <value>
+          <integer>28</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Linear Algebra</criterionID>
+        <value>
+          <integer>22</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Calculus</criterionID>
+        <value>
+          <integer>27</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Functional Analysis</criterionID>
+        <value>
+          <integer>21</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Anal. Chemistry I</criterionID>
+        <value>
+          <integer>29</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Applied Anal. Chemistry</criterionID>
+        <value>
+          <integer>21</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Organic Chem. I</criterionID>
+        <value>
+          <integer>28</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Organic Chem. II</criterionID>
+        <value>
+          <integer>20</integer>
+        </value>
+      </performance>
+    </alternativePerformances>
+    <alternativePerformances>
+      <alternativeID>s2</alternativeID>
+      <performance>
+        <criterionID>Group Theory</criterionID>
+        <value>
+          <integer>20</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Linear Algebra</criterionID>
+        <value>
+          <integer>23</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Calculus</criterionID>
+        <value>
+          <integer>19</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Functional Analysis</criterionID>
+        <value>
+          <integer>22</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Anal. Chemistry I</criterionID>
+        <value>
+          <integer>30</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Applied Anal. Chemistry</criterionID>
+        <value>
+          <integer>20</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Organic Chem. I</criterionID>
+        <value>
+          <integer>29</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Organic Chem. II</criterionID>
+        <value>
+          <integer>19</integer>
+        </value>
+      </performance>
+    </alternativePerformances>
+    <alternativePerformances>
+      <alternativeID>s3</alternativeID>
+      <performance>
+        <criterionID>Group Theory</criterionID>
+        <value>
+          <integer>29</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Linear Algebra</criterionID>
+        <value>
+          <integer>21</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Calculus</criterionID>
+        <value>
+          <integer>28</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Functional Analysis</criterionID>
+        <value>
+          <integer>20</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Anal. Chemistry I</criterionID>
+        <value>
+          <integer>18</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Applied Anal. Chemistry</criterionID>
+        <value>
+          <integer>24</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Organic Chem. I</criterionID>
+        <value>
+          <integer>18</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Organic Chem. II</criterionID>
+        <value>
+          <integer>23</integer>
+        </value>
+      </performance>
+    </alternativePerformances>
+    <alternativePerformances>
+      <alternativeID>s4</alternativeID>
+      <performance>
+        <criterionID>Group Theory</criterionID>
+        <value>
+          <integer>30</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Linear Algebra</criterionID>
+        <value>
+          <integer>20</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Calculus</criterionID>
+        <value>
+          <integer>29</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Functional Analysis</criterionID>
+        <value>
+          <integer>19</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Anal. Chemistry I</criterionID>
+        <value>
+          <integer>28</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Applied Anal. Chemistry</criterionID>
+        <value>
+          <integer>22</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Organic Chem. I</criterionID>
+        <value>
+          <integer>27</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Organic Chem. II</criterionID>
+        <value>
+          <integer>21</integer>
+        </value>
+      </performance>
+    </alternativePerformances>
+    <alternativePerformances>
+      <alternativeID>s5</alternativeID>
+      <performance>
+        <criterionID>Group Theory</criterionID>
+        <value>
+          <integer>18</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Linear Algebra</criterionID>
+        <value>
+          <integer>24</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Calculus</criterionID>
+        <value>
+          <integer>18</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Functional Analysis</criterionID>
+        <value>
+          <integer>23</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Anal. Chemistry I</criterionID>
+        <value>
+          <integer>20</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Applied Anal. Chemistry</criterionID>
+        <value>
+          <integer>23</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Organic Chem. I</criterionID>
+        <value>
+          <integer>19</integer>
+        </value>
+      </performance>
+      <performance>
+        <criterionID>Organic Chem. II</criterionID>
+        <value>
+          <integer>22</integer>
+        </value>
+      </performance>
+    </alternativePerformances>
+  </performanceTable>
+</xmcda:XMCDA>
