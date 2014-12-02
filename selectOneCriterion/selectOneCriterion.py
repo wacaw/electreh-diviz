@@ -1,54 +1,93 @@
 # -*-coding:utf-8 -*
+"""
+selectOneCriterion
+Usage:
+    selectOneCriterion.py -i DIR -o DIR
+
+Options:
+    -i DIR     Specify input directory. It should contain the following files:
+                   outranking.xml
+                   selected.xml
+    -o DIR     Specify output directory. Files generated as output:
+                   outranking.xml
+                   messages.xml
+    --version  Show version.
+    -h --help  Show this screen.
+"""
+
 import os, sys, argparse, inspect
 
-#PyXMCDA
-sys.path.append('/Users/wachu/mgr/src')
-import PyXMCDA
+import PyXMCDA as px
+from docopt import docopt
+from common import comparisons_to_xmcda, create_messages_file, get_dirs, \
+    get_error_message, get_input_data, get_linear, write_xmcda, Vividict
 
-
-"""###############
-# DIVIZ
-#
-# python script -o infile1 -s infile2 -r outfile1 -m outfile2
-# 2 infiles
-# 2 outfiles (1- message)
-#
-################
-"""
 compatibleWith2_0_0 = True
-    
+
+__version__ = '0.1.0'
+
+def main(argv=None):
+    try:
+        args = docopt(__doc__, version=__version__)
+        output_dir = None
+        input_dir, output_dir = get_dirs(args)
+
+        files = {}
+        filenames = [
+            'outranking.xml',
+            'selected.xml',
+        ]
+
+        for f in filenames:
+            file_name = os.path.join(input_dir, f)
+            if not os.path.isfile(file_name):
+                raise RuntimeError("Problem with the input file: '{}'."
+                                        .format(f))
+            tree_name = os.path.splitext(f)[0]
+            if 'classes' in tree_name:
+                tree_name = tree_name.replace('classes', 'categories')
+            files.update({tree_name: file_name})
+
+        exitStatus = 0
+        makeSelection(files['selected'], files['outranking'],os.path.join(output_dir,'outranking.xml'))
+        create_messages_file(None, ('Everything OK.',), output_dir)
+    except ValueError as e:
+        exitStatus = -1
+        create_messages_file((e.message), ('error.',), output_dir)
+    return exitStatus
+
 
 def write_xmcda_content(filename, content=None):
     outfile = open(filename, 'w')
-    PyXMCDA.writeHeader (outfile)
+    px.writeHeader (outfile)
     if content != None:
             outfile.write(content)
-    PyXMCDA.writeFooter(outfile)
+    px.writeFooter(outfile)
     outfile.close()
-    
+
 def makeSelection(in_selected, in_outranking, out_outranking):
-    xml_outranking = PyXMCDA.parseValidate(in_outranking)
-    xml_selected = PyXMCDA.parseValidate(in_selected)
+    xml_outranking = px.parseValidate(in_outranking)
+    xml_selected = px.parseValidate(in_selected)
     if xml_selected == None:
         raise ValueError, "Invalid selected file"
     if xml_outranking == None:
         raise ValueError, "Invalid xml_outranking file"
-    
-    onCriterion = PyXMCDA.getParameterByName(xml_selected, 'selectedCriterion')
+
+    onCriterion = px.getParameterByName(xml_selected, 'selectedCriterion')
     alternativesComparisions = getAlternativesComparisonsAtCriteria(xml_outranking)
-    
+
     if not alternativesComparisions.has_key(onCriterion):
         raise ValueError, 'Invalid selected criterion'
     writeAlternativeComparisionOnCriterion(out_outranking, alternativesComparisions, onCriterion, 'outranks')
-    
+
 def writeAlternativeComparisionOnCriterion(filename, comparisionMx, criterion, comparisionType=None):
     compatibleWith2_0_0 = True
     outfile = open(filename, 'w')
     if compatibleWith2_0_0 :
-        PyXMCDA.writeHeader(outfile, '2.0.0')
+        px.writeHeader(outfile, '2.0.0')
         writeCriterion = None
     else:
-        PyXMCDA.writeHeader(outfile)
+        px.writeHeader(outfile)
         writeCriterion = criterion #definicja jakiego kryterium dotyczny dane porównanie dopiero w standardzie 2_2_1
     #for key, item in comparisionMx.items() :
     outfile.write('\t<alternativesComparisons mcdaConcept="Pairwise comparison">\n')
@@ -68,29 +107,29 @@ def writeAlternativeComparisionOnCriterion(filename, comparisionMx, criterion, c
             </terminal>
             <value>
                 %s
-            </value>  
+            </value>
         </pair>\n""" % (key1, key2, correctType(item2)))
-    outfile.write('\t\t</pairs>\n')     
+    outfile.write('\t\t</pairs>\n')
     outfile.write('\t</alternativesComparisons>\n')
-    PyXMCDA.writeFooter(outfile)
-    outfile.close()  
- 
- 
+    px.writeFooter(outfile)
+    outfile.close()
+
+
 def correctType(value):
     if isinstance(value, float):
         return "<real>%s</real>" % value
     elif isinstance(value, int):
-        return "<integer>%s</integer>" % value    
+        return "<integer>%s</integer>" % value
     elif isinstance(value, str):
         return "<label>%s</label>" % value
     else:
         return "<label>%s</label>" % value
-       
+
 def getAlternativesComparisonsAtCriteria (xmltree, mcdaConcept=None) :
 
     #Retourne le premier alternativeComparisons trouve avec le bon MCDAConcept (si precise)
     #Par la suite, retourner une liste ?
-    
+
     if mcdaConcept == None :
         strSearch = ".//alternativesComparisons"
     else :
@@ -100,7 +139,7 @@ def getAlternativesComparisonsAtCriteria (xmltree, mcdaConcept=None) :
 
     if comparisons == None :
         return {}
-    
+
     else :
         datas = {}
         for comparison in comparisons :
@@ -108,8 +147,8 @@ def getAlternativesComparisonsAtCriteria (xmltree, mcdaConcept=None) :
             for pair in comparison.findall ("pairs/pair") :
                 init = pair.find("initial/alternativeID").text
                 term = pair.find("terminal/alternativeID").text
-                
-                val = PyXMCDA.getNumericValue(pair)
+
+                val = px.getNumericValue(pair)
                 # Only the alternatives concerned
                 if crit != None :
                     # We check if init is still an entry in the table
@@ -134,87 +173,31 @@ def xmcda_write_method_messages(xmlfile, type, messages) :
     xmlfile.write('</methodMessages>\n')
 
 
-def main(argv=None):
-    for_diviz = (inspect.stack()[0][1] != '/Users/wachu/mgr/src/selectOneCriterion/selectOneCriterion.py')    
-    
-    if argv is None:
-        argv = sys.argv
-    
-    parser = argparse.ArgumentParser(description=__doc__)
 
-    grp_input = parser.add_argument_group("Inputs")
-    grp_input.add_argument('-s', '--selected')
-    grp_input.add_argument('-o', '--outranking')
 
-    grp_output = parser.add_argument_group("Outputs")
-    grp_output.add_argument('-r', '--outrankingOut', metavar='output.xml')
-    grp_output.add_argument('-m', '--messages', metavar='<file.xml>', help='All messages are redirected to this XMCDA file instead of being sent to stdout or stderr.  Note that if an output directory is specified (option -O), the path is relative to this directory.')
 
-    args = parser.parse_args()
 
-    if not for_diviz:
-        in_dir = "tests/mieszkaniePoznan/"
-        in_selected = in_dir + "selected.xml"
-        in_outranking = in_dir + "outranking.xml"
-        
-        out_dir = "tests/mieszkaniePoznan/"
-        out_outranking = out_dir + "outrankingOut.xml"
-        out_messages = out_dir + "message.xml"
 
-    else :
-        in_selected = args.selected
-        in_outranking = args.outranking
-    
-        out_outranking = args.outrankingOut
-        out_messages = args.messages
-    
-    if out_messages:
-        messages_fd = open(out_messages, 'w')
-        PyXMCDA.writeHeader(messages_fd)
-    
-    exitStatus = 0
-    
-    try:
-        makeSelection(in_selected, in_outranking, out_outranking)
-    except ValueError as e:
-        #(ValueError,RuntimeError, TypeError, NameError,KeyError) as e:
-        exitStatus = -1
-        if out_messages:
-            xmcda_write_method_messages(messages_fd, 'error', [e.message])
-        else:
-            sys.stderr.write(e.message)
-    else:
-       if out_messages: xmcda_write_method_messages(messages_fd, 'log', ['Execution ok'])
-    finally:
-        if out_messages:
-            PyXMCDA.writeFooter(messages_fd)
-            messages_fd.close()
-            
-    return exitStatus        
- 
- 
- 
- 
 # -*-coding:utf-8 -*
 import sys
 
 class Distillation:
-    
+
     def __init__(self, alternativesIds, CredibilityMatrix):
         self.alternatives = alternativesIds
         self.CredibilityMatrix = CredibilityMatrix
         self.resultsHolder = self.createArrayOfAlternatives()
         self.lambd = 0
         self.options = self.Options(0.15, 0.3)
-        
+
         self.dest()
-    
+
     def dest(self):
         self.BuildDistillationPreorder(True)
         self.BuildDistillationPreorder(False)
         self.MakeIntersection()
-        
-        
+
+
     class Alternative:
         def __init__(self, name):
             self.name = name
@@ -223,21 +206,21 @@ class Distillation:
             self.qualification = 0
             self.placeInAscendingPreorder = 0
             self.placeInDescendingPreorder = 0
-            
+
         def printInfo(self):
-            print "%s : globl %s,  local %s,  qualification %s , placeinAscenfing %s, placeDESC %s." % (self.name, self.isGlobalSelected, self.isLocalSelected, self.qualification, self.placeInAscendingPreorder, self.placeInDescendingPreorder)   
-            
+            print "%s : globl %s,  local %s,  qualification %s , placeinAscenfing %s, placeDESC %s." % (self.name, self.isGlobalSelected, self.isLocalSelected, self.qualification, self.placeInAscendingPreorder, self.placeInDescendingPreorder)
+
     class Options:
         def __init__(self, Alpha, Beta):
             self.DistillationAlphaCoefficient = Alpha
             self.DistillationBetaCoefficient = Beta
-     
+
     def MakeIntersection(self):
         final = {}
         for alt1 in self.alternatives:
             for alt2 in self.alternatives:
                 if alt1 == alt2 :
-                   final.setdefault(alt1, {}).update({alt2:'?'}) 
+                   final.setdefault(alt1, {}).update({alt2:'?'})
                 else:
                     alt1Asc = self.resultsHolder[alt1].placeInAscendingPreorder
                     alt2Asc = self.resultsHolder[alt2].placeInAscendingPreorder
@@ -246,7 +229,7 @@ class Distillation:
                     #print "alt1 %s; alt2 %s; alt1Asc %s ,alt2Asc %s , alt1Desc %s ,alt2Desc %s " % (alt1,alt2,alt1Asc, alt2Asc, alt1Desc, alt2Desc)
                     if alt1Asc <= alt2Asc:
                         if alt1Desc >= alt2Desc  :
-                            
+
                             final.setdefault(alt1, {}).update({alt2:1.0})
                         else :
                             final.setdefault(alt1, {}).update({alt2:'?'})
@@ -255,9 +238,9 @@ class Distillation:
                             final.setdefault(alt1, {}).update({alt2:'?'})
                         else :
                             final.setdefault(alt1, {}).update({alt2:0})
-                
+
         self.intersectionUpDowns = final
-            
+
     def forConsolePrint(self):
         ret = ""
         for alt in self.alternatives:
@@ -269,29 +252,29 @@ class Distillation:
         for a, val in self.resultsHolder.items():
             value[a] = val.placeInDescendingPreorder
         return value
-    
+
     def upwards(self):
         value = {}
         for a, val in self.resultsHolder.items():
-            value[a] = -val.placeInAscendingPreorder  
+            value[a] = -val.placeInAscendingPreorder
         return value
 
-    
-    
+
+
     def createArrayOfAlternatives(self):
         value = {}
         for alt in self.alternatives:
             value[alt] = self.Alternative(alt)
         return value
-        
+
     def PrepareToDistillation(self):
         self.lambd = 0.0
 
         for alternative1 in self.alternatives:
             if self.resultsHolder[alternative1].isGlobalSelected :
                 for alternative2 in self.alternatives:
-                    if (self.resultsHolder[alternative2].isGlobalSelected and 
-                        alternative1 != alternative2 and 
+                    if (self.resultsHolder[alternative2].isGlobalSelected and
+                        alternative1 != alternative2 and
                         self.CredibilityMatrix[alternative1][alternative2] > self.lambd):
                         self.lambd = self.CredibilityMatrix[alternative1][alternative2]
             self.resultsHolder[alternative1].isLocalSelected = self.resultsHolder[alternative1].isGlobalSelected
@@ -303,9 +286,9 @@ class Distillation:
         for alternative1 in self.alternatives:
             if self.resultsHolder[alternative1].isLocalSelected:
                 for alternative2 in self.alternatives:
-                    if (self.resultsHolder[alternative2].isLocalSelected and 
-                        alternative1 != alternative2 and 
-                        self.CredibilityMatrix[alternative1][alternative2] < threshold and 
+                    if (self.resultsHolder[alternative2].isLocalSelected and
+                        alternative1 != alternative2 and
+                        self.CredibilityMatrix[alternative1][alternative2] < threshold and
                         self.CredibilityMatrix[alternative1][alternative2] > self.lambd) :
                         self.lambd = self.CredibilityMatrix[alternative1][alternative2]
             self.resultsHolder[alternative1].qualification = 0
@@ -318,11 +301,11 @@ class Distillation:
                 for alternative2 in self.alternatives:
                     credibility = self.CredibilityMatrix[alternative1][alternative2]
 
-                    if (self.resultsHolder[alternative2].isLocalSelected and 
-                        alternative1 != alternative2 and 
-                        credibility > self.lambd and 
+                    if (self.resultsHolder[alternative2].isLocalSelected and
+                        alternative1 != alternative2 and
+                        credibility > self.lambd and
                         credibility > self.CredibilityMatrix[alternative2][alternative1] + self.options.DistillationAlphaCoefficient * credibility + self.options.DistillationBetaCoefficient) :
-                        self.resultsHolder[alternative1].qualification += 1 
+                        self.resultsHolder[alternative1].qualification += 1
                         self.resultsHolder[alternative2].qualification -= 1
                         #self.resultsHolder[alternative1].printInfo()
                         #self.resultsHolder[alternative2].printInfo()
@@ -351,7 +334,7 @@ class Distillation:
             #print currentQualification
             LC = self.resultsHolder[alternative].qualification
             if (self.resultsHolder[alternative].isLocalSelected and LC == currentQualification):
-                    alternativeCounter += 1 
+                    alternativeCounter += 1
             else:
                 self.resultsHolder[alternative].isLocalSelected = False
 
@@ -368,7 +351,7 @@ class Distillation:
                 if self.resultsHolder[alternative].isLocalSelected:
                     self.resultsHolder[alternative].placeInAscendingPreorder = distillationNumber
                     self.resultsHolder[alternative].isGlobalSelected = False
-        
+
         for alternative in self.alternatives:
             if self.resultsHolder[alternative].isGlobalSelected:
                 return True
@@ -387,9 +370,9 @@ class Distillation:
 
         while True :
             if isDescendingDistillation:
-                distillationNumber += alternativeCounter    
+                distillationNumber += alternativeCounter
             self.PrepareToDistillation()
-            while True : 
+            while True :
                 self.ComputeNewlambd()
                 self.ComputelambdQualification()
                 alternativeCounter = self.GetQualificationSet(isDescendingDistillation)
@@ -398,13 +381,13 @@ class Distillation:
 
             if not isDescendingDistillation:
                 distillationNumber += alternativeCounter
-                
+
             if not self.ModifyDistillationSet(isDescendingDistillation, distillationNumber) :
                 break
 
-       
+
 if __name__ == "__main__":
     sys.exit(main())
-        
-        
-        
+
+
+

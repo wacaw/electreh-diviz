@@ -1,5 +1,5 @@
 """
-ElectreH - This module performs distillation (upwards/downwards)
+ElectreH method for multiple-criteria decision aiding with hierarchical structure of criteria
 Usage:
     ElectreH.py -i DIR -o DIR
 

@@ -1,1 +1,1 @@
-python electreH.py -i test/in2 -o test/out2
+python electreH.py -i tests/in2 -o tests/out2
