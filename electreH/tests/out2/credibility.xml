@@ -4,408 +4,6 @@
 
 	<alternativesComparisons mcdaConcept="Pairwise comparison">
 		<comparisonType>credibility</comparisonType>
-		<criterionID>Root</criterionID>
-		<pairs>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Ogrody</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Centrum</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </terminal>
-                <value>
-                    <real>1</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Suchy Las</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Ogrody</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Ogrody</alternativeID>
-                </terminal>
-                <value>
-                    <real>1</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Ogrody</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Ogrody</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Centrum</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Ogrody</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Ogrody</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Ogrody</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Suchy Las</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Ogrody</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo</alternativeID>
-                </terminal>
-                <value>
-                    <real>1</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Centrum</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Suchy Las</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Centrum</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Ogrody</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Centrum</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Centrum</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Centrum</alternativeID>
-                </terminal>
-                <value>
-                    <real>1</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Centrum</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Centrum</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Centrum</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Suchy Las</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Ogrody</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Centrum</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </terminal>
-                <value>
-                    <real>1</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Suchy Las</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Suchy Las</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Ogrody</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Suchy Las</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Suchy Las</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Centrum</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Suchy Las</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Suchy Las</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Suchy Las</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Suchy Las</alternativeID>
-                </terminal>
-                <value>
-                    <real>1</real>
-                </value>
-            </pair>
-		</pairs>
-	</alternativesComparisons>
-	<alternativesComparisons mcdaConcept="Pairwise comparison">
-		<comparisonType>credibility</comparisonType>
 		<criterionID>Samochod</criterionID>
 		<pairs>
 			<pair>
@@ -1050,6 +648,408 @@
                 </terminal>
                 <value>
                     <real>1.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Centrum</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Centrum</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Suchy Las</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Ogrody</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Centrum</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </terminal>
+                <value>
+                    <real>1</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Suchy Las</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Suchy Las</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Ogrody</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Suchy Las</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Suchy Las</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Centrum</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Suchy Las</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Suchy Las</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Suchy Las</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Suchy Las</alternativeID>
+                </terminal>
+                <value>
+                    <real>1</real>
+                </value>
+            </pair>
+		</pairs>
+	</alternativesComparisons>
+	<alternativesComparisons mcdaConcept="Pairwise comparison">
+		<comparisonType>credibility</comparisonType>
+		<criterionID>Root</criterionID>
+		<pairs>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Ogrody</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Centrum</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </terminal>
+                <value>
+                    <real>1</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Suchy Las</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Ogrody</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Ogrody</alternativeID>
+                </terminal>
+                <value>
+                    <real>1</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Ogrody</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Ogrody</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Centrum</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Ogrody</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Ogrody</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Ogrody</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Suchy Las</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Ogrody</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo</alternativeID>
+                </terminal>
+                <value>
+                    <real>1</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Centrum</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Suchy Las</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Centrum</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Ogrody</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Centrum</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Centrum</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Centrum</alternativeID>
+                </terminal>
+                <value>
+                    <real>1</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Centrum</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
                 </value>
             </pair>
 			<pair>
@@ -2818,6 +2818,408 @@
 	</alternativesComparisons>
 	<alternativesComparisons mcdaConcept="Pairwise comparison">
 		<comparisonType>credibility</comparisonType>
+		<criterionID>Rower</criterionID>
+		<pairs>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Ogrody</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo</alternativeID>
+                </terminal>
+                <value>
+                    <real>1.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Centrum</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </terminal>
+                <value>
+                    <real>1</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </terminal>
+                <value>
+                    <real>1.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Suchy Las</alternativeID>
+                </terminal>
+                <value>
+                    <real>1.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Ogrody</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Ogrody</alternativeID>
+                </terminal>
+                <value>
+                    <real>1</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Ogrody</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Ogrody</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Centrum</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Ogrody</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Ogrody</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </terminal>
+                <value>
+                    <real>1.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Ogrody</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Suchy Las</alternativeID>
+                </terminal>
+                <value>
+                    <real>1.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Ogrody</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo</alternativeID>
+                </terminal>
+                <value>
+                    <real>1</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Centrum</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </terminal>
+                <value>
+                    <real>1.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </terminal>
+                <value>
+                    <real>1.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Piatkowo</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Suchy Las</alternativeID>
+                </terminal>
+                <value>
+                    <real>1.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Centrum</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Ogrody</alternativeID>
+                </terminal>
+                <value>
+                    <real>1.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Centrum</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.923344947735</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Centrum</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Centrum</alternativeID>
+                </terminal>
+                <value>
+                    <real>1</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Centrum</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.923344947735</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Centrum</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </terminal>
+                <value>
+                    <real>1.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Centrum</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Suchy Las</alternativeID>
+                </terminal>
+                <value>
+                    <real>1.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Ogrody</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Centrum</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </terminal>
+                <value>
+                    <real>1</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Suchy Las</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Suchy Las</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Ogrody</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Suchy Las</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Suchy Las</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Centrum</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Suchy Las</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Piatkowo 2</alternativeID>
+                </terminal>
+                <value>
+                    <real>0.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Suchy Las</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Tarnowo Podgorne</alternativeID>
+                </terminal>
+                <value>
+                    <real>1.0</real>
+                </value>
+            </pair>
+			<pair>
+                <initial>
+                    <alternativeID>Suchy Las</alternativeID>
+                </initial>
+                <terminal>
+                    <alternativeID>Suchy Las</alternativeID>
+                </terminal>
+                <value>
+                    <real>1</real>
+                </value>
+            </pair>
+		</pairs>
+	</alternativesComparisons>
+	<alternativesComparisons mcdaConcept="Pairwise comparison">
+		<comparisonType>credibility</comparisonType>
 		<criterionID>Dojazd do centrum</criterionID>
 		<pairs>
 			<pair>
@@ -3484,408 +3886,6 @@
                 </terminal>
                 <value>
                     <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Ogrody</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Centrum</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </terminal>
-                <value>
-                    <real>1</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Suchy Las</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Suchy Las</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Ogrody</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Suchy Las</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Suchy Las</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Centrum</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Suchy Las</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Suchy Las</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </terminal>
-                <value>
-                    <real>1.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Suchy Las</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Suchy Las</alternativeID>
-                </terminal>
-                <value>
-                    <real>1</real>
-                </value>
-            </pair>
-		</pairs>
-	</alternativesComparisons>
-	<alternativesComparisons mcdaConcept="Pairwise comparison">
-		<comparisonType>credibility</comparisonType>
-		<criterionID>Rower</criterionID>
-		<pairs>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Ogrody</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo</alternativeID>
-                </terminal>
-                <value>
-                    <real>1.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Centrum</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </terminal>
-                <value>
-                    <real>1</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </terminal>
-                <value>
-                    <real>1.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Suchy Las</alternativeID>
-                </terminal>
-                <value>
-                    <real>1.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Ogrody</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Ogrody</alternativeID>
-                </terminal>
-                <value>
-                    <real>1</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Ogrody</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Ogrody</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Centrum</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Ogrody</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Ogrody</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </terminal>
-                <value>
-                    <real>1.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Ogrody</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Suchy Las</alternativeID>
-                </terminal>
-                <value>
-                    <real>1.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Ogrody</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo</alternativeID>
-                </terminal>
-                <value>
-                    <real>1</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Centrum</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </terminal>
-                <value>
-                    <real>1.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </terminal>
-                <value>
-                    <real>1.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Piatkowo</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Suchy Las</alternativeID>
-                </terminal>
-                <value>
-                    <real>1.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Centrum</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Ogrody</alternativeID>
-                </terminal>
-                <value>
-                    <real>1.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Centrum</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.923344947735</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Centrum</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Centrum</alternativeID>
-                </terminal>
-                <value>
-                    <real>1</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Centrum</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Piatkowo 2</alternativeID>
-                </terminal>
-                <value>
-                    <real>0.923344947735</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Centrum</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Tarnowo Podgorne</alternativeID>
-                </terminal>
-                <value>
-                    <real>1.0</real>
-                </value>
-            </pair>
-			<pair>
-                <initial>
-                    <alternativeID>Centrum</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>Suchy Las</alternativeID>
-                </terminal>
-                <value>
-                    <real>1.0</real>
                 </value>
             </pair>
 			<pair>

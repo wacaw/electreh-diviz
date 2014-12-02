@@ -12,7 +12,7 @@
                     </terminal>
                     <value>
                         <label>?</label>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -23,7 +23,7 @@
                     </terminal>
                     <value>
                         <real>1.0</real>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -34,7 +34,7 @@
                     </terminal>
                     <value>
                         <real>1.0</real>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -45,7 +45,7 @@
                     </terminal>
                     <value>
                         <integer>0</integer>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -56,7 +56,7 @@
                     </terminal>
                     <value>
                         <real>1.0</real>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -67,7 +67,7 @@
                     </terminal>
                     <value>
                         <real>1.0</real>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -78,7 +78,7 @@
                     </terminal>
                     <value>
                         <label>?</label>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -89,7 +89,7 @@
                     </terminal>
                     <value>
                         <real>1.0</real>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -100,7 +100,7 @@
                     </terminal>
                     <value>
                         <integer>0</integer>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -111,7 +111,7 @@
                     </terminal>
                     <value>
                         <real>1.0</real>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -122,7 +122,7 @@
                     </terminal>
                     <value>
                         <real>1.0</real>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -133,7 +133,7 @@
                     </terminal>
                     <value>
                         <real>1.0</real>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -144,7 +144,7 @@
                     </terminal>
                     <value>
                         <label>?</label>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -155,7 +155,7 @@
                     </terminal>
                     <value>
                         <integer>0</integer>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -166,7 +166,7 @@
                     </terminal>
                     <value>
                         <real>1.0</real>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -177,7 +177,7 @@
                     </terminal>
                     <value>
                         <real>1.0</real>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -188,7 +188,7 @@
                     </terminal>
                     <value>
                         <real>1.0</real>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -199,7 +199,7 @@
                     </terminal>
                     <value>
                         <real>1.0</real>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -210,7 +210,7 @@
                     </terminal>
                     <value>
                         <label>?</label>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -221,7 +221,7 @@
                     </terminal>
                     <value>
                         <real>1.0</real>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -232,7 +232,7 @@
                     </terminal>
                     <value>
                         <real>1.0</real>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -243,7 +243,7 @@
                     </terminal>
                     <value>
                         <real>1.0</real>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -254,7 +254,7 @@
                     </terminal>
                     <value>
                         <real>1.0</real>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -265,7 +265,7 @@
                     </terminal>
                     <value>
                         <integer>0</integer>
-                    </value>  
+                    </value>
                 </pair>
 			<pair>
                     <initial>
@@ -276,7 +276,7 @@
                     </terminal>
                     <value>
                         <label>?</label>
-                    </value>  
+                    </value>
                 </pair>
 		</pairs>
 	</alternativesComparisons>
