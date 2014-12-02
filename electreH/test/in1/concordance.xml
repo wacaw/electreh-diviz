@@ -3,7 +3,7 @@
 	<projectReference>
 		<comment>Concordance cutting levels.</comment>
 	</projectReference>
-	
+
 	<criteriaValues mcdaConcept="Concordance" name="Concordacce cutting level">
 		<criterionValue>
 			<criterionID>Algebra</criterionID>
@@ -31,4 +31,4 @@
 		</criterionValue>
 	</criteriaValues>
 </xmcda:XMCDA>
-  
+

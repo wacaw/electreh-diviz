@@ -1,8 +1,0 @@
-,kom. pub. Koszt,kom. pub. Czas,kom. pub. Komfort,samochod Koszt,samochod Czas,samochod Komfort,rower Koszt,rower Czas,rower Komfort,ocena okolicy,metraz mieszkania,cena,bezpieczenstwo,ocena mieszkania,odleglosc od szkoly,odleglosc od parkow
-vetoAlpha,"0,5","0,5","0,5","0,5","0,5","0,5","0,5","0,5","0,5","0,5","0,5","0,5","0,5","0,5","0,5","0,5"
-vetoBeta,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-indiffAlpha,"0,08","0,08","0,08","0,08","0,08","0,08","0,08","0,08","0,08","0,08","0,08","0,08","0,08","0,08","0,08","0,08"
-indiffBeta,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-prefAlpha,"0,2","0,2","0,2","0,2","0,2","0,2","0,2","0,2","0,2","0,2","0,2","0,2","0,2","0,2","0,2","0,2"
-prefBeta,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-preferenceDirection,min,min,max,min,min,max,min,min,max,max,max,min,max,max,min,min
