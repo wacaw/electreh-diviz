@@ -1,106 +1,77 @@
 # -*-coding:utf-8 -*
+"""
+ElectreH Rob method for multiple-criteria decision aiding with hierarchical structure of criteria
+Usage:
+    ElectreH.py -i DIR -o DIR
+
+Options:
+    -i DIR     Specify input directory. It should contain the following files:
+                   alternative_comparisions.xml
+                   alternatives.xml
+                   criteria.xml
+                   hierarchy.xml
+                   performance_table.xml
+                   weights.xml
+    -o DIR     Specify output directory. Files generated as output:
+                   outranking.xml
+                   messages.xml
+    --version  Show version.
+    -h --help  Show this screen.
+"""
+
+
 import sys, os, argparse, inspect, re, subprocess
 import pymprog
 import itertools
 from contextlib import nested
 from compiler.ast import Sub
-#add path to local PyXMCDA
-sys.path.append('/Users/wachu/mgr/src')
 from Criterion import *
-import PyXMCDA
-sys.path.append('/Users/wachu/mgr/src/electreH')
-#from distillation import *
+from common import comparisons_to_xmcda, create_messages_file, get_dirs, \
+    get_error_message, get_input_data, get_linear, write_xmcda, Vividict
+
+import PyXMCDA as px
 
 from time import gmtime, strftime
 
+__version__ = '0.1.0'
 
-VERSION = "1.0"
-"""#DIVIZ PROGRAM
-#cmd: python script -a infile1 -c infile2 -p infile3 -t infile4 -ac infile5 -r outfile1 -m outfile2
-#
-# 5 x infile
-# 2 x outfile
-###
-"""
 def main(argv=None):
-    #zmenna do testów
-    for_diviz = (inspect.stack()[0][1] != '/Users/wachu/mgr/src/electreH-ROR/electreHROR.py')
-
-    if argv is None:
-        argv = sys.argv
-
-    parser = argparse.ArgumentParser(description=__doc__)
-
-    grp_input = parser.add_argument_group("Inputs")
-    grp_input.add_argument('-a', '--alternatives')
-    grp_input.add_argument('-p', '--performances')
-    grp_input.add_argument('-t', '--treeHierarchy')
-    grp_input.add_argument('-c', '--criteria')
-    grp_input.add_argument('-ac', '--alternativecomparisions')
-
-
-    grp_output = parser.add_argument_group("Outputs")
-    grp_output.add_argument('-r', '--outranking', metavar='output.xml')
-    #grp_output.add_argument('-o', '--credibility', metavar='output.xml')
-    grp_output.add_argument('-m', '--messages', metavar='<file.xml>', help='All messages are redirected to this XMCDA file instead of being sent to stdout or stderr.  Note that if an output directory is specified (option -O), the path is relative to this directory.')
-
-    args = parser.parse_args()
-
-    if not for_diviz:
-        in_dir = "/Users/wachu/mgr/src/electreH-ROR/test/mieszkaniePoznan/"
-
-        in_dir = "/Users/wachu/mgr/src/electreH-ROR/test/in1/"
-
-        in_hierarchy = in_dir + "hierarchyComplicated.xml"
-        in_criteria = in_dir + "criteria.xml"
-        in_alternatives = in_dir + "alternatives.xml"
-        in_performances = in_dir + "performances.xml"
-        in_alternativecomparisions = in_dir + "alternativeComparisions.xml"
-
-        in_hierarchy = in_dir + "hierarchy.xml"
-
-        out_dir = "/Users/wachu/mgr/src/electreH-ROR/test/in1"
-        out_outranking = out_dir + "outranking.xml"
-        out_messages = out_dir + "message.xml"
-        #out_credibility = out_dir + "credibility.xml"
-
-    else :
-        in_hierarchy = args.treeHierarchy
-        in_criteria = args.criteria
-        in_alternatives = args.alternatives
-        in_performances = args.performances
-        in_alternativecomparisions = args.alternativecomparisions
-
-        out_outranking = args.outranking
-        #out_credibility = args.credibility
-        out_messages = args.messages
-
-    if out_messages:
-        messages_fd = open(out_messages, 'w')
-        PyXMCDA.writeHeader(messages_fd)
-
-    exitStatus = 0
-
     try:
+        args = docopt(__doc__, version=__version__)
+        output_dir = None
+        input_dir, output_dir = get_dirs(args)
+
+        files = {}
+        filenames = [
+            'alternative_comparisions',
+            'alternatives.xml',
+            'criteria.xml',
+            'concordance.xml',
+            'hierarchy.xml',
+            'performance_table.xml',
+            'weights.xml',
+        ]
+
+        for f in filenames:
+            file_name = os.path.join(input_dir, f)
+            if not os.path.isfile(file_name):
+                raise RuntimeError("Problem with the input file: '{}'."
+                                        .format(f))
+            tree_name = os.path.splitext(f)[0]
+            if 'classes' in tree_name:
+                tree_name = tree_name.replace('classes', 'categories')
+            files.update({tree_name: file_name})
+
+        exitStatus = 0
+
         alternativesIDs, criteriaIDs, performanceTable, criteria, criteriaThresholds, outranking = \
-        parse_xmcda_files(in_hierarchy, in_criteria, in_performances, in_alternatives, in_alternativecomparisions)
+        parse_xmcda_files(files['hierarchy'], files['criteria'], files['performances'], files['alternatives'], files['alternative_comparisions'])
         method = ElectreHROR(alternativesIDs, criteriaIDs, performanceTable, criteria, criteriaThresholds, outranking)
         method.solve()
         method.writeOutranking(out_outranking)
     except ValueError as e:
         exitStatus = -1
-        if out_messages:
-            xmcda_write_method_messages(messages_fd, 'error', [e.message])
-        else:
-            sys.stderr.write(e.message)
-    else:
-       if out_messages: xmcda_write_method_messages(messages_fd, 'log', ['Execution ok'])
-    finally:
-        if out_messages:
-            PyXMCDA.writeFooter(messages_fd)
-            messages_fd.close()
-
-#
+        create_messages_file((e.message), ('error.',), output_dir)
     return exitStatus
 
 

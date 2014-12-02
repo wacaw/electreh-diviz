@@ -1,0 +1,1 @@
+python electreHROR.py -i tests/in1 -o tests/out1
