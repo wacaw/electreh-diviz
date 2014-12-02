@@ -1,0 +1,1 @@
+python csvToXMCDA-criteriaHierarchy.py -i tests/in2 -o tests/out2

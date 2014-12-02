@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type='text/xsl' href='xmcdaXSL.xsl'?>
+<xmcda:XMCDA xmlns:xmcda='http://www.decision-deck.org/2012/XMCDA-2.2.1' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.decision-deck.org/2012/XMCDA-2.2.1 http://www.decision-deck.org/xmcda/_downloads/XMCDA-2.2.1.xsd'>
+
+  <criteria>
+
+        <criterion id="Anal. Chemistry I" name="Anal. Chemistry I">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="indiff">
+					<constant>
+						<integer>2</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<integer>5</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="veto">
+					<constant>
+						<integer>10</integer>
+					</constant>
+				</threshold>
+			</thresholds>
+        </criterion>
+        <criterion id="Applied Anal. Chemistry" name="Applied Anal. Chemistry">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="indiff">
+					<constant>
+						<integer>2</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<integer>5</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="veto">
+					<constant>
+						<integer>10</integer>
+					</constant>
+				</threshold>
+			</thresholds>
+        </criterion>
+        <criterion id="Calculus" name="Calculus">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="indiff">
+					<constant>
+						<integer>1</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<integer>4</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="veto">
+					<constant>
+						<integer>10</integer>
+					</constant>
+				</threshold>
+			</thresholds>
+        </criterion>
+        <criterion id="Functional Analysis" name="Functional Analysis">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="indiff">
+					<constant>
+						<integer>1</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<integer>4</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="veto">
+					<constant>
+						<integer>10</integer>
+					</constant>
+				</threshold>
+			</thresholds>
+        </criterion>
+        <criterion id="Group Theory" name="Group Theory">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="indiff">
+					<constant>
+						<integer>1</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<integer>4</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="veto">
+					<constant>
+						<integer>10</integer>
+					</constant>
+				</threshold>
+			</thresholds>
+        </criterion>
+        <criterion id="Linear Algebra" name="Linear Algebra">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="indiff">
+					<constant>
+						<integer>1</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<integer>4</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="veto">
+					<constant>
+						<integer>10</integer>
+					</constant>
+				</threshold>
+			</thresholds>
+        </criterion>
+        <criterion id="Organic Chem. I" name="Organic Chem. I">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="indiff">
+					<constant>
+						<integer>2</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<integer>5</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="veto">
+					<constant>
+						<integer>10</integer>
+					</constant>
+				</threshold>
+			</thresholds>
+        </criterion>
+        <criterion id="Organic Chem. II" name="Organic Chem. II">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="indiff">
+					<constant>
+						<integer>2</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<integer>5</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="veto">
+					<constant>
+						<integer>10</integer>
+					</constant>
+				</threshold>
+			</thresholds>
+        </criterion>  </criteria>
+
+</xmcda:XMCDA>

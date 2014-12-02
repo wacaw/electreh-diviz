@@ -1,0 +1,58 @@
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2012/XMCDA-2.2.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<projectReference>
+		<comment>Weights.</comment>
+	</projectReference>
+
+	<criteriaValues mcdaConcept="Importance" name="significance">
+		<criterionValue>
+			<criterionID>Group Theory</criterionID>
+			<value>
+				<real>0.1</real>
+			</value>
+		</criterionValue>
+		<criterionValue>
+			<criterionID>Linear Algebra</criterionID>
+			<value>
+				<real>0.15</real>
+			</value>
+		</criterionValue>
+		<criterionValue>
+			<criterionID>Calculus</criterionID>
+			<value>
+				<real>0.125</real>
+			</value>
+		</criterionValue>
+		<criterionValue>
+			<criterionID>Functional Analysis</criterionID>
+			<value>
+				<real>0.15</real>
+			</value>
+		</criterionValue>
+		<criterionValue>
+			<criterionID>Anal. Chemistry I</criterionID>
+			<value>
+				<real>0.1</real>
+			</value>
+		</criterionValue>
+		<criterionValue>
+			<criterionID>Applied Anal. Chemistry</criterionID>
+			<value>
+				<real>0.125</real>
+			</value>
+		</criterionValue>
+		<criterionValue>
+			<criterionID>Organic Chem. I</criterionID>
+			<value>
+				<real>0.15</real>
+			</value>
+		</criterionValue>
+		<criterionValue>
+			<criterionID>Organic Chem. II</criterionID>
+			<value>
+				<real>0.1</real>
+			</value>
+		</criterionValue>
+	</criteriaValues>
+</xmcda:XMCDA>
+

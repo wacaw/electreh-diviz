@@ -36,7 +36,7 @@ def main(argv=None):
         args = docopt(__doc__, version=__version__)
         output_dir = None
         input_dir, output_dir = get_dirs(args)
-
+        exitStatus = 0
         files = {}
         filenames = [
             'alternatives.xml',
@@ -57,7 +57,6 @@ def main(argv=None):
                 tree_name = tree_name.replace('classes', 'categories')
             files.update({tree_name: file_name})
 
-        exitStatus = 0
         (alternatives_ids, criteria_ids, performance_table, criteriaWeight, preferenceDirections, hierarchyArray, criteria_thresholds, concordanceCutLev) = \
         parse_xmcda_files(files['weights'], files['hierarchy'], files['concordance'], files['criteria'], files['alternatives'], files['performance_table'])
         electreH = ElectreH(alternatives_ids, criteria_ids, performance_table, criteriaWeight, preferenceDirections, hierarchyArray, criteria_thresholds, concordanceCutLev)

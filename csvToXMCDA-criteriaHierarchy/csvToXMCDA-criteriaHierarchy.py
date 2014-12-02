@@ -1,21 +1,26 @@
-# -*-coding:utf-8 -*
+"""
+csvToXMCDA - Transforms a file containing criteria values from a comma-separated values (CSV)
+file to two XMCDA compliant files, containing the corresponding criteria ids and their criteriaHierarchy.
+Usage:
+    csvToXMCDA-criteriaHierarchy.py -i DIR -o DIR
 
+Options:
+    -i DIR     Specify input directory. It should contain the following files:
+                   criteria_hierarchy.csv
+    -o DIR     Specify output directory. Files generated as output:
+                   criteria.xml
+                   hierarchy.xml
+    --version  Show version.
+    -h --help  Show this screen.
+"""
 
-'''
-DIVIZ
-
-python script -i infile1 -c outfile1 -C outfile2 -m outfile3
-1 x infile
-3 x outfile
-
-Transforms a file containing criteria values from a comma-separated values (CSV) file to two XMCDA compliant files, containing the corresponding criteria ids and their criteriaHierarchy.'''
 import argparse, csv, sys, os
 from optparse import OptionParser
-
-sys.path.append('/Users/wachu/mgr/src')
-     
-import PyXMCDA
-
+from docopt import docopt
+import PyXMCDA as px
+from common import comparisons_to_xmcda, create_messages_file, get_dirs, \
+    get_error_message, get_input_data, get_linear, write_xmcda, Vividict
+__version__ = '0.1.0'
 
 def xmcda_write_method_messages(xmlfile, type, messages) :
     if type not in ('log', 'error'):
@@ -67,7 +72,7 @@ def transform(csv_file):
         content = csv_reader(csv_file)
     except:
         raise ValueError, 'Could not read csv file'
-    
+
     try:
         children = content.next()
     except StopIteration:
@@ -81,15 +86,15 @@ def transform(csv_file):
     if parents[0] == 'parent' and (children[0] == 'children' or children[0] == 'child'):
         mcdaConcept = 'hierarchy'
     else:
-        mcdaConcept = parents[0]    
+        mcdaConcept = parents[0]
     children = children[1:]
     parents = parents[1:]
-    
+
     #
     if not 'Root' in children:
         children=['Root']+children
         parents=['']+parents
-     
+
     if len(children) == 0 or len(parents) == 0:
         raise ValueError, 'csv should contain at least one criteria/value'
     if len(children) != len(parents):
@@ -99,19 +104,19 @@ def transform(csv_file):
 
 def output_criteria(filename, criteria_ids):
     outfile = open(filename, 'w')
-    PyXMCDA.writeHeader(outfile)
+    px.writeHeader(outfile)
     outfile.write('  <criteria>\n')
     for id in criteria_ids:
         outfile.write('    <criterion id="%s" />\n' % id)
     outfile.write('  </criteria>\n')
-    PyXMCDA.writeFooter(outfile)
+    px.writeFooter(outfile)
     outfile.close()
 
 
 xml_value_label = '''
         <criterionID>%s</criterionID>
       '''[1:]
-def xml_node_label(a, b='', space=''): 
+def xml_node_label(a, b='', space=''):
     return '''
       %s<node>
         %s<criterionID>%s</criterionID>    %s%s
@@ -126,11 +131,11 @@ def make_tree(root, parents, xmlparents, level=1, maxlevel=100):
         if parent == root:
             ret += xml_node_label(xmlparents[idx], make_tree(xmlparents[idx], parents, xmlparents, level + 1, maxlevel), level * space)
     return ret
-        
-        
+
+
 def output_criteriaValues(filename, criteria_ids, mcdaConcept, parents):
     outfile = open(filename, 'w')
-    PyXMCDA.writeHeader(outfile)
+    px.writeHeader(outfile)
     outfile.write('  <%s>' % mcdaConcept)
     outfile.write('''
     <description>
@@ -140,105 +145,44 @@ def output_criteriaValues(filename, criteria_ids, mcdaConcept, parents):
 
     xmlparents = [ xml_value_label % v for v in criteria_ids ]
 
-
     outfile.write(make_tree('', parents, criteria_ids))
-        
-#    for id, weight in map(None, criteria_ids, xmlparents):
-#        outfile.write("""
-#    <criterionParent>
-#      <criterionID>%s</criterionID>
-#%s
-#    </criterionParent>
-#""" % (id, weight))
+
     outfile.write('\n  </%s>\n' % mcdaConcept)
-    PyXMCDA.writeFooter(outfile)
+    px.writeFooter(outfile)
     outfile.close()
 
-def csv_to_criteriaValues(csv_file, out_criteria, out_criteriaValues):
-    # If some mandatory input files are missing
-    if not os.path.isfile(csv_file):
-        raise ValueError, "input file 'criteriaHierarchy.csv' is missing: " + os.path.realpath(csv_file)
+def csv_to_criteriaValues(csv_file, out_criteria, out_hierarchy):
     criteria_ids, mcdaConcept, parents = transform(csv_file)
     output_criteria(out_criteria, criteria_ids)
-    output_criteriaValues(out_criteriaValues, criteria_ids, mcdaConcept, parents)
-
+    output_criteriaValues(out_hierarchy, criteria_ids, mcdaConcept, parents)
 
 def main(argv=None):
-    if argv is None:
-        argv = sys.argv
-    
-    parser = argparse.ArgumentParser(description=__doc__)
-
-    grp_input = parser.add_mutually_exclusive_group(required=True)
-    grp_input.add_argument('-I', '--in-dir')
-    grp_input.add_argument('-i', '--csv')
-
-    grp_output = parser.add_argument_group("Outputs",
-                                           description="Options -c and -C are linked and should be supplied (or omitted) together.  They are mutually exclusive with option -O")
-    grp_output.add_argument('-O', '--out-dir', metavar='<output directory>', help='If specified, the files "criteria.xml" and "criteriaValues.xml" will be created in this directory.  The directory must exist beforehand.')
-    grp_output.add_argument('-c', '--criteria', metavar='output.xml')
-    grp_output.add_argument('-C', '--criteriaValues', metavar='output.xml')
-
-    grp_output.add_argument('-m', '--messages', metavar='<file.xml>', help='All messages are redirected to this XMCDA file instead of being sent to stdout or stderr.  Note that if an output directory is specified (option -O), the path is relative to this directory.')
-
-    args = parser.parse_args()
-    #in_dir = options.in_dir
-    #out_dir = options.out_dir
-    if args.out_dir and (args.criteria or args.criteriaValues):
-        parser.error('Options -O and -c/-C are mutually exclusive')
-    if args.criteria != args.criteriaValues \
-        and None in (args.criteria, args.criteriaValues):
-        parser.error('Options -c and -C must be supplied (or omitted) together')
-    if args.out_dir and args.criteria:
-        parser.error('Options -O and -c/-C are mutually exclusive')
-
-    if args.in_dir:
-        csv_file = os.path.join(args.in_dir, 'criteriaHierarchy.csv')
-    else:
-        csv_file = args.csv
-
-    if args.out_dir:
-        out_criteria = os.path.join(args.out_dir, 'criteria.xml')
-        out_criteriaValues = os.path.join(args.out_dir, 'criteriaHierarchy.xml')
-    else:
-        out_criteria = args.criteria
-        out_criteriaValues = args.criteriaValues
-
-    if args.messages and args.out_dir is not None:
-        args.messages = os.path.join(args.out_dir, args.messages)
-    else:
-        messages = args.messages
-#    messages = 'messages.xml'
-    if messages:
-        messages_fd = open(messages, 'w')
-        PyXMCDA.writeHeader(messages_fd)
-
-    exitStatus = 0
-    #sys.stdout.write('Nurkujemy ' + sys.argv[2])
-    #print 'lol'
-    
-    
-    
-    # here, sys.argv[0] is 'script'
-    #csv_file = sys.argv[1]
-    #out_criteria = sys.argv[2]
-    #out_criteriaValues = sys.argv[3]
-    
     try:
-        csv_to_criteriaValues(csv_file, out_criteria, out_criteriaValues)
+        args = docopt(__doc__, version=__version__)
+        output_dir = None
+        input_dir, output_dir = get_dirs(args)
+        exitStatus = 0
+        files = {}
+        filenames = [
+            'criteria_hierarchy.csv',
+        ]
+
+        for f in filenames:
+            file_name = os.path.join(input_dir, f)
+            if not os.path.isfile(file_name):
+                raise RuntimeError("Problem with the input file: '{}'."
+                                        .format(f))
+            tree_name = os.path.splitext(f)[0]
+            if 'classes' in tree_name:
+                tree_name = tree_name.replace('classes', 'categories')
+            files.update({tree_name: file_name})
+        exitStatus = 0
+        csv_to_criteriaValues(files['criteria_hierarchy'], os.path.join(output_dir,'criteria.xml'), os.path.join(output_dir,'hierarchy.xml'))
+        create_messages_file(None, ('Everything OK.',), output_dir)
+
     except ValueError as e:
         exitStatus = -1
-        if messages:
-            xmcda_write_method_messages(messages_fd, 'error', [e.message])
-        else:
-            sys.stderr.write(e.message)
-    else:
-       if messages: xmcda_write_method_messages(messages_fd, 'log', ['Execution ok'])
-    finally:
-        if messages:
-            PyXMCDA.writeFooter(messages_fd)
-            messages_fd.close()
-
+        create_messages_file((e.message), ('error.',), output_dir)
     return exitStatus
 
 if __name__ == "__main__":

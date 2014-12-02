@@ -1,0 +1,34 @@
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2012/XMCDA-2.2.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<projectReference>
+		<comment>Concordance cutting levels.</comment>
+	</projectReference>
+
+	<criteriaValues mcdaConcept="Concordance" name="Concordacce cutting level">
+		<criterionValue>
+			<criterionID>Algebra</criterionID>
+			<value>
+				<real>0.1625</real>
+			</value>
+		</criterionValue>
+		<criterionValue>
+			<criterionID>Analysis</criterionID>
+			<value>
+				<real>0.1787</real>
+			</value>
+		</criterionValue>
+		<criterionValue>
+			<criterionID>Anal. Chem</criterionID>
+			<value>
+				<real>0.1462</real>
+			</value>
+		</criterionValue>
+		<criterionValue>
+			<criterionID>Org. Chem</criterionID>
+			<value>
+				<real>0.1625</real>
+			</value>
+		</criterionValue>
+	</criteriaValues>
+</xmcda:XMCDA>
+

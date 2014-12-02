@@ -1,19 +1,40 @@
+"""
+checkCriteriaHierarchy
+
+Usage:
+    ElectreH.py -i DIR -o DIR
+
+Options:
+    -i DIR     Specify input directory. It should contain the following files:
+                   criteria.xml
+                   hierarchy.xml
+                   concordance.xml
+                   weights.xml
+
+    -o DIR     Specify output directory. Files generated as output:
+                   criteria.xml
+                   hierarchy.xml
+                   concordance.xml
+                   weights.xml
+    --version  Show version.
+    -h --help  Show this screen.
+"""
+
+
+
 import argparse, csv, sys, os, inspect, re
 from contextlib import nested
 from lxml import etree
-
-#add path to PyXMCDA
-sys.path.append('/Users/wachu/mgr/src')
+from docopt import docopt
 from Criterion import *
-import PyXMCDA
+from common import comparisons_to_xmcda, create_messages_file, get_dirs, \
+    get_error_message, get_input_data, get_linear, write_xmcda, Vividict
+
+__version__ = '0.1.0'
+
+import PyXMCDA as px
 from optparse import OptionParser
 
-"""
-#python script -c infile1 -t infile2 -l infile3 -w infile4 -W outfile1 -T outfile2 -C outfile3 -L outfile4 -m outfile5
-# 4 inputes
-# 5 outputs
-"""
-# not using PyXMCDA, to avoid the unnecessary dependency to lxml
 def xmcda_write_header(xmlfile)     :
     xmlfile.write("<?xml version='1.0' encoding='UTF-8'?>\n")
     xmlfile.write("<xmcda:XMCDA xmlns:xmcda='http://www.decision-deck.org/2009/XMCDA-2.1.0' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.decision-deck.org/2009/XMCDA-2.1.0 http://www.decision-deck.org/xmcda/_downloads/XMCDA-2.1.0.xsd'>\n")
@@ -33,10 +54,10 @@ def xmcda_write_method_messages(xmlfile, type, messages) :
 
 def write_xmcda_content(filename, content=None):
     outfile = open(filename, 'w')
-    PyXMCDA.writeHeader (outfile)
+    px.writeHeader (outfile)
     if content != None:
             outfile.write(content)
-    PyXMCDA.writeFooter(outfile)
+    px.writeFooter(outfile)
     outfile.close()
 
 
@@ -232,7 +253,7 @@ xml_value_label = '''
 
 def output_criteriaValues(filename, weights, mcdaConcept):
     outfile = open(filename, 'w')
-    PyXMCDA.writeHeader(outfile)
+    px.writeHeader(outfile)
     outfile.write('  <criteriaValues mcdaConcept="%s">' % mcdaConcept)
 
     try:
@@ -248,26 +269,26 @@ def output_criteriaValues(filename, weights, mcdaConcept):
     </criterionValue>
 """ % (id, weight))
     outfile.write('  </criteriaValues>\n')
-    PyXMCDA.writeFooter(outfile)
+    px.writeFooter(outfile)
     outfile.close()
 
 
 
 def check_weights(xml_weights, hierarchyArray, outfile):
     ret = ""
-    weights = PyXMCDA.getCriterionValue(xml_weights, [(getOriginalName(v)) for v, k in hierarchyArray.items()], 'Importance')
+    weights = px.getCriterionValue(xml_weights, [(getOriginalName(v)) for v, k in hierarchyArray.items()], 'Importance')
     weights = calculate_new_weights(weights, hierarchyArray)
     output_criteriaValues(outfile, weights, 'Importance')
 
 
 def check_concordance(xml_concordance, hierarchyArray, outfile):
     ret = ""
-    concordances = PyXMCDA.getCriterionValue(xml_concordance, [(getOriginalName(v)) for v, k in hierarchyArray.items()], 'Concordance')
+    concordances = px.getCriterionValue(xml_concordance, [(getOriginalName(v)) for v, k in hierarchyArray.items()], 'Concordance')
     if concordances.__len__() > 0 :
         concordances = calculate_new_concordance(concordances, hierarchyArray)
         output_criteriaValues(outfile, concordances, 'Concordance')
     else :
-        check = PyXMCDA.getParameterByName(xml_concordance, 'percentage', 'concordanceLevel')
+        check = px.getParameterByName(xml_concordance, 'percentage', 'concordanceLevel')
         if check != None :
             content = """
     <methodParameters name="concordanceLevel">
@@ -309,14 +330,14 @@ def trivialCopy(xmltree, critId) :
 
 
 def output_criteria(filename, criteria_ids, xml_crit):
-    oldCriteriaIDs = PyXMCDA.getCriteriaID(xml_crit)
+    oldCriteriaIDs = px.getCriteriaID(xml_crit)
     trivial = trivialCopy(xml_crit, oldCriteriaIDs)
-    #critScale = PyXMCDA.getCriteriaScalesTypes(xml_crit, oldCriteriaIDs)
-    #critThresholds = PyXMCDA.getConstantThresholds(xml_crit, oldCriteriaIDs)
-    #critPreference = PyXMCDA.getCriteriaPreferenceDirections(xml_crit, oldCriteriaIDs)
+    #critScale = px.getCriteriaScalesTypes(xml_crit, oldCriteriaIDs)
+    #critThresholds = px.getConstantThresholds(xml_crit, oldCriteriaIDs)
+    #critPreference = px.getCriteriaPreferenceDirections(xml_crit, oldCriteriaIDs)
 
     outfile = open(filename, 'w')
-    PyXMCDA.writeHeader(outfile)
+    px.writeHeader(outfile)
     outfile.write('  <criteria>\n')
     for id in sorted(criteria_ids):
         oldID = getOriginalName(id)
@@ -332,14 +353,14 @@ def output_criteria(filename, criteria_ids, xml_crit):
         <criterion id="%s" name="%s">\n%s
         </criterion>''' % (id,id,trivial[oldID]))
     outfile.write('  </criteria>\n')
-    PyXMCDA.writeFooter(outfile)
+    px.writeFooter(outfile)
     outfile.close()
 
 def check_criteria_hierarchy(in_weights, in_hierarchy, in_concorlevel, in_criteria, out_criteria, out_weights, out_hierarchy, out_concorlevel):
-    weights_xmltree = PyXMCDA.parseValidate(in_weights)
-    hierarchy_xmtree = PyXMCDA.parseValidate(in_hierarchy)
-    concordance_xmltree = PyXMCDA.parseValidate(in_concorlevel)
-    criteria_xmltree = PyXMCDA.parseValidate(in_criteria)
+    weights_xmltree = px.parseValidate(in_weights)
+    hierarchy_xmtree = px.parseValidate(in_hierarchy)
+    concordance_xmltree = px.parseValidate(in_concorlevel)
+    criteria_xmltree = px.parseValidate(in_criteria)
 
     if weights_xmltree == None:
         raise ValueError, 'Invalid weights file'
@@ -358,79 +379,37 @@ def check_criteria_hierarchy(in_weights, in_hierarchy, in_concorlevel, in_criter
 
 
 def main(argv=None):
-    if argv is None:
-        argv = sys.argv
-
-    parser = argparse.ArgumentParser(description=__doc__)
-
-    grp_input = parser.add_argument_group("Inputs")
-    grp_input.add_argument('-w', '--weights')
-    grp_input.add_argument('-t', '--treeHierarchy')
-    grp_input.add_argument('-l', '--concordanceLevel')
-    grp_input.add_argument('-c', '--criteriaThresholds')
-
-    grp_output = parser.add_argument_group("Outputs")
-    grp_output.add_argument('-W', '--newWeights', metavar='output.xml')
-    grp_output.add_argument('-T', '--newHiererchy', metavar='output.xml')
-    grp_output.add_argument('-C', '--newCriteria', metavar='output.xml')
-    grp_output.add_argument('-L', '--newconcordanceLevel', metavar='output.xml')
-
-
-    grp_output.add_argument('-m', '--messages', metavar='<file.xml>', help='All messages are redirected to this XMCDA file instead of being sent to stdout or stderr.  Note that if an output directory is specified (option -O), the path is relative to this directory.')
-
-    args = parser.parse_args()
-
-    if False:
-        in_dir ="/Users/wachu/mgr/src/electreH/test/mieszkaniePoznan/"
-        in_weights = in_dir + "weights.xml" # in_dir + "weights.xml"
-        in_hierarchy = in_dir + "hierarchyComplicated.xml" #in_dir + "hierarchy.xml"
-        in_concorlevel = in_dir + "concordanceLevels.xml"
-        in_criteria = in_dir + "criteria.xml"
-
-        out_dir = "/Users/wachu/mgr/src/electreH/test/out1/"
-        out_criteria = out_dir + "crt.xml"
-        out_weights = out_dir + "wei.xml"
-        out_hierarchy = out_dir + "hier.xml"
-        out_concorlevel = out_dir + "conc.xml"
-
-    else :
-        in_weights = args.weights
-        in_hierarchy = args.treeHierarchy
-        in_concorlevel = args.concordanceLevel
-        in_criteria = args.criteriaThresholds
-
-        out_criteria = args.newCriteria
-        out_weights = args.newWeights
-        out_hierarchy = args.newHiererchy
-        out_concorlevel = args.newconcordanceLevel
-
-    if args.messages is not None:
-        messages = args.messages
-    else:
-        messages = '/Users/wachu/mgr/src/electreH/test/out1/messages.xml'
-
-    if messages:
-        messages_fd = open(messages, 'w')
-        xmcda_write_header(messages_fd)
-
-    exitStatus = 0
-
-
     try:
-        check_criteria_hierarchy(in_weights, in_hierarchy, in_concorlevel, in_criteria, out_criteria, out_weights, out_hierarchy, out_concorlevel)
-    except (ValueError, KeyError) as e:
-        exitStatus = -1
-        if messages:
-            xmcda_write_method_messages(messages_fd, 'error', [e.message])
-        else:
-            sys.stderr.write(e.message)
-    else:
-       if messages: xmcda_write_method_messages(messages_fd, 'log', ['Execution ok'])
-    finally:
-        if messages:
-            xmcda_write_footer(messages_fd)
-            messages_fd.close()
+        args = docopt(__doc__, version=__version__)
+        output_dir = None
+        input_dir, output_dir = get_dirs(args)
+        exitStatus = 0
+        files = {}
+        filenames = [
+                   'criteria.xml',
+                   'hierarchy.xml',
+                   'concordance.xml',
+                   'weights.xml',
+        ]
 
+        for f in filenames:
+            file_name = os.path.join(input_dir, f)
+            if not os.path.isfile(file_name):
+                raise RuntimeError("Problem with the input file: '{}'."
+                                        .format(f))
+            tree_name = os.path.splitext(f)[0]
+            if 'classes' in tree_name:
+                tree_name = tree_name.replace('classes', 'categories')
+            files.update({tree_name: file_name})
+
+
+        check_criteria_hierarchy(files['weights'], files['hierarchy'], files['concordance'], files['criteria'],\
+        os.path.join(output_dir,'criteria.xml'), os.path.join(output_dir,'weights.xml'), \
+        os.path.join(output_dir,'hierarchy.xml'), os.path.join(output_dir,'concordance.xml'))
+        create_messages_file(None, ('Everything OK.',), output_dir)
+    except ValueError as e:
+        exitStatus = -1
+        create_messages_file((e.message), ('error.',), output_dir)
     return exitStatus
 
 if __name__ == "__main__":
