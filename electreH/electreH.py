@@ -378,17 +378,17 @@ def parse_xmcda_files(in_weights, in_hierarchy, in_concorlevel, in_criteria, in_
     xml_hierarchy = px.parseValidate(in_hierarchy)
     xml_concordance = px.parseValidate(in_concorlevel)
     if xml_crit == None:
-        raise ValueError, "Invalid criteria file"
+        raise ValueError, ["Invalid criteria file"]
     if xml_alt == None:
-        raise ValueError, "Invalid alternative file"
+        raise ValueError, ["Invalid alternative file"]
     if xml_pt == None:
-        raise ValueError, "Invalid performance table file"
+        raise ValueError, ["Invalid performance table file"]
     if xml_weight == None:
-        raise ValueError, "Invalid weight file"
+        raise ValueError, ["Invalid weight file"]
     if xml_hierarchy == None:
-        raise ValueError, "Invalid assignment file"
+        raise ValueError, ["Invalid assignment file"]
     if xml_concordance == None:
-        raise ValueError, "Invalid concordance file"
+        raise ValueError, ["Invalid concordance file"]
 
     try:
         alternatives_ids = px.getAlternativesID(xml_alt)
@@ -400,7 +400,7 @@ def parse_xmcda_files(in_weights, in_hierarchy, in_concorlevel, in_criteria, in_
         criteria_thresholds = px.getConstantThresholds(xml_crit, criteria_ids)
         concordanceCutLev = get_criterion_concordance_cutting_level_value(xml_concordance, 'Concordance')
     except:
-        raise ValueError, "Failed to parse one or more file"
+        raise ValueError, ["Failed to parse one or more file"]
         return
 
     return alternatives_ids, criteria_ids, performance_table, criteriaWeight, preferenceDirections, hierarchyArray, criteria_thresholds, concordanceCutLev
